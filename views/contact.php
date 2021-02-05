@@ -15,7 +15,7 @@
             <input type="email" name="email" class="form-control">
         </div>
         <div class="mb-3">
-            <label class="form-check-label">Check me out</label>
+            <label class="form-check-label">Message</label>
             <textarea type="text" name="message" class="form-control"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>

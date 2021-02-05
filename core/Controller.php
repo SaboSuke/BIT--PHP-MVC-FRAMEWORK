@@ -12,12 +12,18 @@ namespace app\core;
 
 class Controller{
     
+    public string $layout = 'main';
+
     /**
      * Controller constructor
      * 
      */
     public function __construct(){
         //
+    }
+
+    public function setLayout($layout){
+        $this->layout = $layout;
     }
 
     public function render($view, $params = []){

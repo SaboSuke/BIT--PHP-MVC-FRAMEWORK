@@ -2,6 +2,8 @@
 /** User: Sabo */
 
 namespace app\core;
+use app\core\Request;
+use app\core\Response;
 
 /** 
  * Class Router
@@ -50,9 +52,10 @@ class Router{
 
         if(is_array($callback)){
             //creating an instance of the class $callback[0] = SiteController::class
-            $callback[0] = new $callback[0](); //controller name
+            Application::$app->controller = new $callback[0](); //controller name
+            $callback[0] = Application::$app->controller;
         }
-        return call_user_func($callback);
+        return call_user_func($callback, $this->request);
     }
 
     //content rendering passed in parameter
@@ -68,9 +71,10 @@ class Router{
     }
     
     protected function layoutContent(){
+        $layout = Application::$app->controller->layout;
         //start the output caching ==> nothing is outputted to the browser
         ob_start();
-        include_once Application::$ROOT_DIRECTORY."/views/layouts/main.php";
+        include_once Application::$ROOT_DIRECTORY."/views/layouts/$layout.php";
         return ob_get_clean(); // returns whatever is already buffered and clears the buffer
         
     }

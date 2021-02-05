@@ -2,6 +2,10 @@
 /** User: Sabo */
 
 namespace app\core;
+use app\core\Router;
+use app\core\Request;
+use app\core\Response;
+use app\core\Controller;
 
 /** 
  * Class Application
@@ -17,6 +21,7 @@ class Application{
     public Router $router;
     public Request $request;
     public Response $response;
+    public Controller $controller;
 
     public function __construct($rootPath){
         self::$ROOT_DIRECTORY = $rootPath;
@@ -28,6 +33,20 @@ class Application{
 
     public function run(){
         echo $this->router->resolve();
+    }
+
+    /**
+     * @param \app\core\Controller $controller
+     */
+    public function getController(){
+        return $this->controller;
+    }
+    
+    /**
+     * @param \app\core\Controller $controller
+     */
+    public function setController(Controller $controller){
+        $this->controller = $controller;
     }
 
 }
