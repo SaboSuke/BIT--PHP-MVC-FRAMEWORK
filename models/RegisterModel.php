@@ -4,6 +4,7 @@
 namespace app\models;
 use app\core\Controller;
 use app\core\Request;
+use app\core\Model;
 
 /** 
  * Class RegisterModel
@@ -12,14 +13,14 @@ use app\core\Request;
  * @package app\core
 */
 
-class RegisterModel extends Controller{
+class RegisterModel extends Model{
 
-    public string $first_name;
-    public string $last_name;
-    public string $email;
-    public string $password;
-    public string $password_validate;
-    
+    public string $first_name = '';
+    public string $last_name = '';
+    public string $email = '';
+    public string $password = '';
+    public string $password_validate = '';
+
     /**
      * RegisterModel constructor
      */
@@ -27,15 +28,18 @@ class RegisterModel extends Controller{
         //
     }
     
-    public function login(Request $request){
-        if($request->isPost()){
-            $register = new RegisterModel();
-        }
-        return $this->render('login');
-    }
-
     public function register(){
-        return $this->render('register');
+        //
+    }
+    
+    public function rules():array{
+        return [
+            "first_name" => [self::RULE_REQUIRED],
+            "last_name" => [self::RULE_REQUIRED],
+            "email" => [self::RULE_REQUIRED, self::RULE_EMAIL],
+            "password" => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 8], [self::RULE_MAX, 'max' => 20]],
+            "password_validate" => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']],
+        ];
     }
 
 }
