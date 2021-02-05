@@ -1,0 +1,15 @@
+{
+    "name": "essam/sabo-php",
+    "authors": [
+        {
+            "name": "Essam Abed",
+            "email": "abedissam95@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
