@@ -1,0 +1,2 @@
+--> public folder is the only web accessible folder
+--> start server: php -S localhost:8080 -t public/
