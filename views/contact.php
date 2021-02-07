@@ -1,7 +1,3 @@
-<?php
-/** User: Sabo */
-?>
-
 <h1 class="mt-5 text-center">Contact</h1>
 
 <div class="container mt-5">

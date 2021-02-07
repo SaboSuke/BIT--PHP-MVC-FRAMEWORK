@@ -31,11 +31,10 @@ class Field{
      * @param string $attribute
      * @param string $label
      */
-    public function __construct(Model $model, string $attribute, string $label, string $placeholder){
+    public function __construct(Model $model, string $attribute, string $placeholder){
         $this->type = self::TYPE_TEXT;
         $this->model = $model;
         $this->attribute = $attribute;
-        $this->label = $label;
         $this->placeholder = $placeholder;
     }
 
@@ -49,7 +48,7 @@ class Field{
                 </div>
             </div>
         ', 
-            $this->label,
+            $this->model->getLabel($this->attribute),
             $this->type,
             $this->attribute,
             $this->model->{$this->attribute},

@@ -22,8 +22,8 @@ class Form{
         return '</form>';
     }
 
-    public function field(Model $model, string $attribute, string $label, string $placeholder){
-        return new Field($model, $attribute, $label, $placeholder);
+    public function field(Model $model, string $attribute, string $placeholder){
+        return new Field($model, $attribute, $placeholder);
     }
 
 }

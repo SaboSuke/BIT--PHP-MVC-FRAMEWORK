@@ -1,7 +1,3 @@
-<?php
-/** User: Sabo */
-?>
-
 <!doctype html>
 <html lang="en">
 

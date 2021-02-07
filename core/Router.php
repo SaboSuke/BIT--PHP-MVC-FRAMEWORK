@@ -55,7 +55,7 @@ class Router{
             Application::$app->controller = new $callback[0](); //controller name
             $callback[0] = Application::$app->controller;
         }
-        return call_user_func($callback, $this->request);
+        return call_user_func($callback, $this->request, $this->response);
     }
 
     //content rendering passed in parameter

@@ -1,19 +1,13 @@
 <?php
-/** User: Sabo */
+/** @var $model \app\models\User */
 ?>
 
-<h1 class="mt-5 text-center">Login</h1>
+<h1 class="mt-5 text-center">Welcome Back</h1>
 
 <div class="container mt-5">
-    <form action="" method="post">
-        <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" placeholder="Your Email..">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input type="password" name="password" class="form-control" placeholder="Your Password..">
-        </div>
-        <button type="submit" class="btn btn-primary mb-5">Submit</button>
-    </form>
+    <?php $form = \app\core\form\Form::begin('', "post") ?>
+    <?=$form->field($model, 'email', 'Your email...')->emailField(); ?>
+    <?= $form->field($model, 'password', 'Your password...')->passwordField(); ?>
+    <button type="submit" class="btn btn-primary mb-5">Submit</button>
+    <?php \app\core\form\Form::end() ?>
 </div>
