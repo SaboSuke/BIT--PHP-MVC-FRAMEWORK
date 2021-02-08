@@ -16,11 +16,11 @@ SaboPHP is a PHP MVC framework, it was created for educational purposes but now 
 
 # Features 
 
-## sql
+## Sql
 
 * Implement sql generator methods
 
-## core\form
+## Forms
 
 * Implement missing input methods 
     + checkbox 
@@ -29,10 +29,10 @@ SaboPHP is a PHP MVC framework, it was created for educational purposes but now 
     + progress 
 * Implement send mail method
 
-## response
+## Response
 * Implement an encryption to request
 
-## style
+## Style
 * Implement Favicon
 * Implement new style sheet 'bootswatch'
     + materia
