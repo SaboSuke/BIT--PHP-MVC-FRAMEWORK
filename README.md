@@ -14,10 +14,12 @@ SaboPHP is a PHP MVC framework, it was created for educational purposes but now 
     
     - ```composer require sabosuke/sabophp-mvc-core:^1.0.4```
 
+* Configure the .env file that contains your database dns, user and password 
+
 * Run the migrations.php file 
     - ```php migrations.php```
 
-* Run the server  
+* Lastly Run the server  
     - ```php -S localhost:8085 -t public/```
 # Features 
 
