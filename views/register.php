@@ -1,5 +1,8 @@
 <?php
 /** @var $model \app\models\User */
+/** @var $this \app\core\View  */
+
+$this->title ="Register";
 ?>
 
 <h1 class="mt-5 text-center">Create Your Account</h1>
@@ -15,11 +18,11 @@
         </div>
     </div>
 
-    <?=$form->field($model, 'email',  'Your email...')->emailField(); ?>
+    <?=$form->field($model, 'email',  'Your email...')->emailInputField(); ?>
 
-    <?= $form->field($model, 'password', 'Your password...')->passwordField(); ?>
+    <?= $form->field($model, 'password', 'Your password...')->passwordInputField(); ?>
 
-    <?= $form->field($model, 'password_validate', 'Repeat password...')->passwordField(); ?>
+    <?= $form->field($model, 'password_validate', 'Repeat password...')->passwordInputField(); ?>
 
     <button type="submit" class="btn btn-primary mb-5">Submit</button>
     <?php \app\core\form\Form::end() ?>
