@@ -11,7 +11,7 @@ use app\core\Application;
  * Class LoginForm
  * 
  * @author Essam Abed <abedissam95@gmail.com>
- * @package app\core
+ * @package app\models
 */
 
 class LoginForm extends Model{

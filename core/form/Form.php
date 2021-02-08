@@ -23,7 +23,11 @@ class Form{
     }
 
     public function field(Model $model, string $attribute, string $placeholder){
-        return new Field($model, $attribute, $placeholder);
+        return new InputField($model, $attribute, $placeholder);
+    }
+    
+    public function TextareaField(Model $model, string $attribute, string $placeholder){
+        return new TextareaField($model, $attribute, $placeholder);
     }
 
 }

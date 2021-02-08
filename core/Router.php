@@ -4,6 +4,7 @@
 namespace app\core;
 use app\core\Request;
 use app\core\Response;
+use app\core\exception\NotFoundException;
 
 /** 
  * Class Router
@@ -14,6 +15,7 @@ use app\core\Response;
 
 class Router{
     
+    public string $title;
     public Request $request;
     public Response $response;
     protected array $routes = [];
@@ -42,52 +44,25 @@ class Router{
         $method = $this->request->getMethod();
         $callback = $this->routes[$method][$path] ?? false;
         if($callback === false){
-            $this->response->setStatusCode(404);
-            return $this->renderView("_404");
+            throw new NotFoundException();
         }
             
         if(is_string($callback)){
-            return $this->renderView($callback);
+            return Application::$app->view->renderView($callback);
         }
 
         if(is_array($callback)){
             //creating an instance of the class $callback[0] = SiteController::class
-            Application::$app->controller = new $callback[0](); //controller name
-            $callback[0] = Application::$app->controller;
+            /** @var \app\core\Controller $controller */
+            $controller = new $callback[0](); //controller name
+            Application::$app->controller = $controller;
+            $controller->action = $callback[1];
+            $callback[0] = $controller;
+            foreach($controller->getMiddlewares() as $middleware){
+                $middleware->execute();
+            }
         }
         return call_user_func($callback, $this->request, $this->response);
-    }
-
-    //content rendering passed in parameter
-    public function renderContent($view_content){
-        $layout_content = $this->layoutContent();
-        return str_replace('{{content}}', $view_content, $layout_content);
-    }
-
-    public function renderView($view, $params = []){
-        $layout_content = $this->layoutContent();
-        $view_content = $this->renderOnlyView($view, $params);
-        return str_replace('{{content}}', $view_content, $layout_content);
-    }
-    
-    protected function layoutContent(){
-        $layout = Application::$app->controller->layout;
-        //start the output caching ==> nothing is outputted to the browser
-        ob_start();
-        include_once Application::$ROOT_DIRECTORY."/views/layouts/$layout.php";
-        return ob_get_clean(); // returns whatever is already buffered and clears the buffer
-        
-    }
-
-    protected function renderOnlyView($view, $params){
-        foreach($params as $key => $val){
-            /*  $key = "name"
-                $$key = $name   */
-            $$key = $val;
-        }
-        ob_start();
-        include_once Application::$ROOT_DIRECTORY."/views/$view.php"; 
-        return ob_get_clean();  
     }
 
 }

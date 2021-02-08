@@ -6,7 +6,9 @@ use app\core\Router;
 use app\core\Request;
 use app\core\Response;
 use app\core\Controller;
-use app\core\DbModel;
+use app\core\db\DbModel;
+use app\core\db\Database;
+use app\core\View;
 
 /** 
  * Class Application
@@ -19,15 +21,17 @@ class Application{
 
     public string $userClass;
 
+    public string $layout = 'main';
     public static string $ROOT_DIRECTORY;
     public static Application $app;
     public Router $router;
     public Request $request;
     public Response $response;
-    public Controller $controller;
+    public ?Controller $controller = null;
     public Session $session;
     public Database $db;
-    public ?DbModel $user; //=> it might be null
+    public ?UserModel $user; //=> it might be null
+    public View $view;
 
 
     /**
@@ -43,6 +47,7 @@ class Application{
         $this->response = new Response();
         $this->session = new Session();
         $this->router = new Router($this->request, $this->response);
+        $this->view = new View();
         
         $this->db = new Database($config['db']);
 
@@ -55,7 +60,14 @@ class Application{
     }
 
     public function run(){
-        echo $this->router->resolve();
+        try{
+            echo $this->router->resolve();
+        }catch(\Exception $e){   
+            $this->response->setStatusCode($e->getCode());
+            echo $this->view->renderView('_exception', [
+                    'exception' => $e
+            ]);
+        }
     }
 
     /**
@@ -72,7 +84,7 @@ class Application{
         $this->controller = $controller;
     }
 
-    public function login(DbModel $user){
+    public function login(UserModel $user){
         $this->user = $user;
         $primaryKey = $user->primaryKey();
         $primaryValue = $user->{$primaryKey};
@@ -83,6 +95,10 @@ class Application{
     public function logout(){
         $this->user = null;
         $this->session->remove('user');
+    }
+
+    public static function isGuest(){
+        return !self::$app->user;
     }
 
 }

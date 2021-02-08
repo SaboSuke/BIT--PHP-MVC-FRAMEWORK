@@ -4,16 +4,16 @@
 namespace app\models;
 use app\core\Controller;
 use app\core\Request;
-use app\core\DbModel;
+use app\core\UserModel;
 
 /** 
  * Class User
  * 
  * @author Essam Abed <abedissam95@gmail.com>
- * @package app\core
+ * @package app\models
 */
 
-class User extends DbModel{
+class User extends UserModel{
 
     public const STATUS_INACTIVE = 0;
     public const STATUS_ACTIVE = 1;
@@ -74,6 +74,10 @@ class User extends DbModel{
             'password' => 'Password',
             'password_validate' => 'Confirm Password'
         ];
+    }
+
+    public function displayName(): string{
+        return $this->first_name.' '.$this->last_name;
     }
 
 }
