@@ -4,7 +4,7 @@ SaboPHP is a PHP MVC framework, it was created for educational purposes but now 
 
 # Installation
 
-* clone the project then install its core by running run 
+* Clone the project then install its core by running run 
     
     - ```composer install```
 
@@ -14,6 +14,11 @@ SaboPHP is a PHP MVC framework, it was created for educational purposes but now 
     
     - ```composer require sabosuke/sabophp-mvc-core:^1.0.4```
 
+* Run the migrations.php file 
+    - ```php migrations.php```
+
+* Run the server  
+    - ```php -S localhost:8085 -t public/```
 # Features 
 
 ## Sql
