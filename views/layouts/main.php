@@ -1,5 +1,5 @@
 <?php
-    use app\core\Application;
+    use sabosuke\sabophp_mvc_core\Application;
 ?>
 
 <!doctype html>

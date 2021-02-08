@@ -1,9 +1,9 @@
 <?php
-/** @var $this \app\core\View  */
+/** @var $this \sabosuke\sabophp_mvc_core\View  */
 /** @var $model \app\models\ContactForm  */
 
-use \app\core\form\Form;
-use \app\core\form\TextareaField;
+use \sabosuke\sabophp_mvc_core\form\Form;
+use \sabosuke\sabophp_mvc_core\form\TextareaField;
 
 $this->title ="Contact";
 ?>
@@ -15,5 +15,5 @@ $this->title ="Contact";
     <?= $form->field($model, 'email', 'Your Email'); ?>
     <?= $form->TextareaField($model, 'body', 'Your Message') ?>
     <button type="submit" class="btn btn-primary">Submit</button>
-    <?php \app\core\form\Form::end(); ?>
+    <?php \sabosuke\sabophp_mvc_core\form\Form::end(); ?>
 </div>

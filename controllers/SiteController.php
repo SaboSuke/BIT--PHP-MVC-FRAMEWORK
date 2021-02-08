@@ -2,16 +2,16 @@
 /** User: Sabo */
 
 namespace app\controllers;
-use app\core\Controller;
-use app\core\Request;
-use app\core\Response;
+use sabosuke\sabophp_mvc_core\Controller;
+use sabosuke\sabophp_mvc_core\Request;
+use sabosuke\sabophp_mvc_core\Response;
 use app\models\ContactForm;
-use app\core\Application;
+use sabosuke\sabophp_mvc_core\Application;
 /** 
  * Class SiteController
  * 
  * @author Essam Abed <abedissam95@gmail.com>
- * @package app\core
+ * @package sabosuke\sabophp_mvc_core
 */
 
 class SiteController extends Controller{

@@ -2,7 +2,7 @@
 /** User: Sabo */
 
 /** @var $exception \Exception */
-/** @var $this \app\core\View  */
+/** @var $this \sabosuke\sabophp_mvc_core\View  */
 
 $this->title = $exception->getCode()." Exception";
 

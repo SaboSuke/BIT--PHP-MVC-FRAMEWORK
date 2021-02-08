@@ -3,9 +3,9 @@
 
 use app\controllers\SiteController; 
 use app\controllers\AuthController; 
-use \app\core\Application;
-use \app\core\app\Database;
-use \app\core\Router;
+use \sabosuke\sabophp_mvc_core\Application;
+use \sabosuke\sabophp_mvc_core\app\Database;
+use \sabosuke\sabophp_mvc_core\Router;
 
 require_once __DIR__.'/../vendor/autoload.php';
 $dotenv = \Dotenv\Dotenv::createImmutable(dirname(__DIR__));
