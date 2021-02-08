@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1320190fa7003f3540b2370bb809fdf1",
+    "content-hash": "6ae2709fb4f23917401e3da55ed59826",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -140,6 +140,39 @@
                 }
             ],
             "time": "2020-07-20T17:29:33+00:00"
+        },
+        {
+            "name": "sabosuke/sabophp-mvc-core",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE.git",
+                "reference": "2299df1e88c03f4e6b55e3f4dffa33ca51bcf205"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SaboSuke/PHP-MVC-FRAMEWORK-CORE/zipball/2299df1e88c03f4e6b55e3f4dffa33ca51bcf205",
+                "reference": "2299df1e88c03f4e6b55e3f4dffa33ca51bcf205",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "sabosuke\\sabophp_mvc_core\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "SaboSuke",
+                    "email": "abedissam95@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE/issues",
+                "source": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE/tree/v1.0.3"
+            },
+            "time": "2021-02-08T18:16:37+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
