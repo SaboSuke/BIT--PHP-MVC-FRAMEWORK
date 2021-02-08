@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ae2709fb4f23917401e3da55ed59826",
+    "content-hash": "5eb99f11acff6c51f0b57556730f4e61",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -143,16 +143,16 @@
         },
         {
             "name": "sabosuke/sabophp-mvc-core",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE.git",
-                "reference": "2299df1e88c03f4e6b55e3f4dffa33ca51bcf205"
+                "reference": "201f36f0d9f88c6a280b9f3c2ac29186b9409b98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SaboSuke/PHP-MVC-FRAMEWORK-CORE/zipball/2299df1e88c03f4e6b55e3f4dffa33ca51bcf205",
-                "reference": "2299df1e88c03f4e6b55e3f4dffa33ca51bcf205",
+                "url": "https://api.github.com/repos/SaboSuke/PHP-MVC-FRAMEWORK-CORE/zipball/201f36f0d9f88c6a280b9f3c2ac29186b9409b98",
+                "reference": "201f36f0d9f88c6a280b9f3c2ac29186b9409b98",
                 "shasum": ""
             },
             "type": "library",
@@ -170,9 +170,9 @@
             ],
             "support": {
                 "issues": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE/issues",
-                "source": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE/tree/v1.0.3"
+                "source": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE/tree/v1.0.4"
             },
-            "time": "2021-02-08T18:16:37+00:00"
+            "time": "2021-02-08T19:39:24+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

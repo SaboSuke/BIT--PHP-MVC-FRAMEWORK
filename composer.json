@@ -13,6 +13,6 @@
     },
     "require": {
         "vlucas/phpdotenv": "^5.3",
-        "sabosuke/sabophp-mvc-core": "^v1.0.3"
+        "sabosuke/sabophp-mvc-core": "^1.0.4"
     }
 }
