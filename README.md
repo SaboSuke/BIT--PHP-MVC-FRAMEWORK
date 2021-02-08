@@ -6,9 +6,13 @@ SaboPHP is a PHP MVC framework, it was created for educational purposes but now 
 
 * install project then run 
     
-    ```composer install```
+    - ```composer install```
 
     That will install the core for this framework you can update the core or add new methods too.
+
+* To install the latest version run 
+    
+    - ```composer require sabosuke/sabophp-mvc-core:^1.0.4```
 
 # Features 
 
