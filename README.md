@@ -58,9 +58,9 @@ This project exists thanks to all the people who contribute. [[Contribute](CONTR
     - ```composer require sabosuke/sabophp-mvc-core:^1.0.4```
 # Features 
 
-## Sql
+# Version 2.0
 
-* Implement sql generator methods
+    Next version will Implement sql generator methods to simplify writing sql queries
 
 ## Forms
 * Implement send mail method
