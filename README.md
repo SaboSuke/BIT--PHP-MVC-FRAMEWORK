@@ -26,7 +26,7 @@ BIT(Better In Time) is a PHP MVC framework, it was created for educational purpo
 
 * Lastly Run the server  
     
-        That will install the core for this framework you can update the core or add new methods too.
+    - That will install the core for this framework you can update the core or add new methods too.
 
 * To install the latest version
 - ```php -S localhost:8085 -t public/```
