@@ -73,7 +73,3 @@ This project exists thanks to all the people who contribute. [[Contribute](CONTR
 * Implement new style sheet 'bootswatch'
     + materia
     + fatly
-
-## Framework Name
-* We've been thinking about the name of this framework and then we said let's just use it's purpose so here it is
-    - Better In Time => BIT
