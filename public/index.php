@@ -3,9 +3,9 @@
 
 use app\controllers\SiteController; 
 use app\controllers\AuthController; 
-use \sabosuke\sabophp_mvc_core\Application;
-use \sabosuke\sabophp_mvc_core\app\Database;
-use \sabosuke\sabophp_mvc_core\Router;
+use \sabosuke\bit_mvc_core\Application;
+use \sabosuke\bit_mvc_core\app\Database;
+use \sabosuke\bit_mvc_core\Router;
 
 require_once __DIR__.'/../vendor/autoload.php';
 $dotenv = \Dotenv\Dotenv::createImmutable(dirname(__DIR__));
@@ -23,10 +23,14 @@ $config = [
 
 $app = new Application(dirname(__DIR__), $config);
 
-//to do before the request is made
+/*to do before the request is made
 $app->on(Application::EVENT_BEFORE_REQUEST, function(){
     echo "Before request";
-});
+});*/
+/*to do after the request is made
+$app->on(Application::EVENT_AFTER_REQUEST, function(){
+    echo "After request";
+});*/
 
 $app->router->get('/', [SiteController::class, 'home']);
 

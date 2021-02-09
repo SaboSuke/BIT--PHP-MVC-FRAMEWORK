@@ -1,5 +1,5 @@
 {
-    "name": "essam/sabo-php",
+    "name": "essam/bit",
     "authors": [
         {
             "name": "Essam Abed",
@@ -13,6 +13,6 @@
     },
     "require": {
         "vlucas/phpdotenv": "^5.3",
-        "sabosuke/sabophp-mvc-core": "^1.0.4"
+        "sabosuke/bit-mvc-core": "^v1.0.4"
     }
 }

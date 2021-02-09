@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5eb99f11acff6c51f0b57556730f4e61",
+    "content-hash": "e171117f9bdaea93d1437a78e6eec688",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -142,23 +142,23 @@
             "time": "2020-07-20T17:29:33+00:00"
         },
         {
-            "name": "sabosuke/sabophp-mvc-core",
-            "version": "v1.0.4",
+            "name": "sabosuke/bit-mvc-core",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE.git",
-                "reference": "201f36f0d9f88c6a280b9f3c2ac29186b9409b98"
+                "reference": "c4ba149a292b2672aad3d13cb39af30fac5fa5f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SaboSuke/PHP-MVC-FRAMEWORK-CORE/zipball/201f36f0d9f88c6a280b9f3c2ac29186b9409b98",
-                "reference": "201f36f0d9f88c6a280b9f3c2ac29186b9409b98",
+                "url": "https://api.github.com/repos/SaboSuke/PHP-MVC-FRAMEWORK-CORE/zipball/c4ba149a292b2672aad3d13cb39af30fac5fa5f1",
+                "reference": "c4ba149a292b2672aad3d13cb39af30fac5fa5f1",
                 "shasum": ""
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "sabosuke\\sabophp_mvc_core\\": "./"
+                    "sabosuke\\bit_mvc_core\\": "./"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -170,9 +170,9 @@
             ],
             "support": {
                 "issues": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE/issues",
-                "source": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE/tree/v1.0.4"
+                "source": "https://github.com/SaboSuke/PHP-MVC-FRAMEWORK-CORE/tree/v1.0.5"
             },
-            "time": "2021-02-08T19:39:24+00:00"
+            "time": "2021-02-09T18:35:01+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

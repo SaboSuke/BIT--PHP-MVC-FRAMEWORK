@@ -1,5 +1,5 @@
 <?php
-    /** @var $this \sabosuke\sabophp_mvc_core\View  */
+    /** @var $this \sabosuke\bit_mvc_core\View  */
     $this->title = "Profile";
 ?>
 

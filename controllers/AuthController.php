@@ -2,19 +2,19 @@
 /** User: Sabo */
 
 namespace app\controllers;
-use sabosuke\sabophp_mvc_core\Application;
-use sabosuke\sabophp_mvc_core\Controller;
-use sabosuke\sabophp_mvc_core\Request;
-use sabosuke\sabophp_mvc_core\Response;
+use sabosuke\bit_mvc_core\Application;
+use sabosuke\bit_mvc_core\Controller;
+use sabosuke\bit_mvc_core\Request;
+use sabosuke\bit_mvc_core\Response;
 use app\models\LoginForm;
 use app\models\User;
-use sabosuke\sabophp_mvc_core\middlewares\AuthMiddleware;
+use sabosuke\bit_mvc_core\middlewares\AuthMiddleware;
 
 /** 
  * Class AuthController
  * 
  * @author Essam Abed <abedissam95@gmail.com>
- * @package sabosuke\sabophp_mvc_core
+ * @package sabosuke\bit_mvc_core
 */
 
 class AuthController extends Controller{
@@ -42,6 +42,7 @@ class AuthController extends Controller{
             'model' => $loginForm
         ]);
     }
+    
     public function register(Request $request){
         $user = new User();
         if($request->isPost()){

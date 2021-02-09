@@ -1,7 +1,7 @@
 <?php
 /** User: Sabo */
 
-use \sabosuke\sabophp_mvc_core\db\Database;
+use \sabosuke\bit_mvc_core\db\Database;
 
 class m0002_add_password_column{
 
@@ -12,7 +12,7 @@ class m0002_add_password_column{
      * 
      */
     public function __construct(){
-        $this->db = \sabosuke\sabophp_mvc_core\Application::$app->db;
+        $this->db = \sabosuke\bit_mvc_core\Application::$app->db;
     }
 
     public function up(){

@@ -22,23 +22,40 @@ This project exists thanks to all the people who contribute. [[Contribute](CONTR
 
 # Installation
 
-* Clone the project then install its core by running run 
-    
-    f the core run 
-    
-    - ```composer require sabosuke/sabophp-mvc-core:^1.0.4```
+* Clone the project then install its core by running run  
+    - ```composer require sabosuke/sabophp-mvc-core```
 
 * Configure the ```.env``` file that contains your database dns, user and password 
 
-* Run the migrations.php file 
+* Run the migrations.php file
+    - comment these lines of code inside the Application's constructor class which is inside the package you just installed 
+    
+    > .\vendor\sabosuke\sabophp-mvc-core\Application.php
+    
+    ```$this->userClass = $config['userClass'];```
+
+    ```$primaryValue = $this->session->get('user');```
+
+    ```if ($primaryValue){```
+
+    ```$primaryKey = $this->userClass::primaryKey();```
+
+    ```$this->user = $this->userClass::findOne([$primaryKey => $primaryValue]);```
+    
+    ```}else```
+        
+    ```$this->user = null;```
+    
+    > since there's no user in the database that will generate an error, We're working on a fix for this problem.
+
     - ```php migrations.php```
 
 * Lastly Run the server  
     
-    - That will install the core for this framework you can update the core or add new methods too.
+    - ```php -S localhost:8085 -t public/```
 
 * To install the latest version
-- ```php -S localhost:8085 -t public/```
+    - ```composer require sabosuke/sabophp-mvc-core:^1.0.4```
 # Features 
 
 ## Sql
@@ -46,12 +63,6 @@ This project exists thanks to all the people who contribute. [[Contribute](CONTR
 * Implement sql generator methods
 
 ## Forms
-
-* Implement missing input methods 
-    + checkbox 
-    + radio
-    + select
-    + progress 
 * Implement send mail method
 
 ## Response

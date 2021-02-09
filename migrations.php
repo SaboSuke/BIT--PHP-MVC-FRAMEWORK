@@ -1,7 +1,7 @@
 <?php
 /** User: Sabo */
 
-use sabosuke\sabophp_mvc_core\Application;
+use sabosuke\bit_mvc_core\Application;
 use app\migrations;
 
 require_once __DIR__.'/vendor/autoload.php';

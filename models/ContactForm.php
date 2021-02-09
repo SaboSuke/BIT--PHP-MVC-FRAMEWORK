@@ -2,10 +2,10 @@
 /** User: Sabo */
 
 namespace app\models;
-use sabosuke\sabophp_mvc_core\Controller;
-use sabosuke\sabophp_mvc_core\Request;
-use sabosuke\sabophp_mvc_core\Model;
-use sabosuke\sabophp_mvc_core\Application;
+use sabosuke\bit_mvc_core\Controller;
+use sabosuke\bit_mvc_core\Request;
+use sabosuke\bit_mvc_core\Model;
+use sabosuke\bit_mvc_core\Application;
 
 /** 
  * Class ContactForm

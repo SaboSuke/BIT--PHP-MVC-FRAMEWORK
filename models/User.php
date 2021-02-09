@@ -2,9 +2,9 @@
 /** User: Sabo */
 
 namespace app\models;
-use sabosuke\sabophp_mvc_core\Controller;
-use sabosuke\sabophp_mvc_core\Request;
-use sabosuke\sabophp_mvc_core\UserModel;
+use sabosuke\bit_mvc_core\Controller;
+use sabosuke\bit_mvc_core\Request;
+use sabosuke\bit_mvc_core\UserModel;
 
 /** 
  * Class User
