@@ -11,6 +11,15 @@
 
 BIT(Better In Time) is a PHP MVC framework, it was created for educational purposes but now it's under development to becoming a real open-source framework.
 
+# Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+# Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+
+
 # Installation
 
 * Clone the project then install its core by running run 
