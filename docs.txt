@@ -1,4 +1,0 @@
---> public folder is the only web accessible folder
---> migration is a file contains a change in the database
---> migration in general is committed and pushed
---> start server: php -S localhost:8080 -t public/
