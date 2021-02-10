@@ -13,6 +13,7 @@ $dotenv->load();
 
 
 $config = [
+    'themeClass'=> \app\models\Theme::class,
     'userClass'=> \app\models\User::class,
     'db' => [
         'dsn' => $_ENV['DB_DSN'],
@@ -44,5 +45,7 @@ $app->router->post('/register', [AuthController::class, 'register']);
 $app->router->get('/logout', [AuthController::class, 'logout']);
 
 $app->router->get('/profile', [AuthController::class, 'profile']);
+
+$app->router->get('/change-theme', [SiteController::class, 'theme']);
 
 $app->run();

@@ -1,6 +1,6 @@
 <h1 align="center">
     <br>
-    <img width="500" src="https://firebasestorage.googleapis.com/v0/b/php-mvc-framework-a74d3.appspot.com/o/BIT%20Logo.svg?alt=media&token=dfd627a2-477d-4f47-b193-544929725450" alt="BIt">
+    <img width="500" src="https://firebasestorage.googleapis.com/v0/b/php-mvc-framework-a74d3.appspot.com/o/BIT%20Logo.svg?alt=media&token=dfd627a2-477d-4f47-b193-544929725450" alt="BIT">
     <br>
     <br>
     <br>

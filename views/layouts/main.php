@@ -1,5 +1,6 @@
 <?php
     use sabosuke\bit_mvc_core\Application;
+    include_once "config.php";
 ?>
 
 <!doctype html>
@@ -14,10 +15,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/<?=$theme?>">
     <title><?php echo $this->title;?></title>
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
@@ -34,6 +37,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contact</a>
                     </li>
+                </ul>
+                <ul class="navbar-nav ml-2 mb-2 mb-lg-0">
+                    <?= $theme_selection ?>
                 </ul>
                 <?php if (Application::isGuest()):?>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
@@ -52,8 +58,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">
-                            <?= Application::$app->user->displayName(); ?> (logout)
+                        <a class="btn btn-danger text-white nav-link" href="/logout">
+                            <span><?= Application::$app->user->displayName(); ?></span>
+                            (logout)
                         </a>
                     </li>
                 </ul>

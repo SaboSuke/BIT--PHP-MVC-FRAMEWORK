@@ -13,6 +13,6 @@
     },
     "require": {
         "vlucas/phpdotenv": "^5.3",
-        "sabosuke/bit-mvc-core": "^v1.0.4"
+        "sabosuke/bit-mvc-core": "^v1.0.6"
     }
 }
