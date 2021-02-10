@@ -28,25 +28,6 @@ This project exists thanks to all the people who contribute. [[Contribute](CONTR
 * Configure the ```.env``` file that contains your database dns, user and password 
 
 * Run the migrations.php file
-    - comment these lines of code inside the Application's constructor class which is inside the package you just installed 
-    
-    > .\vendor\sabosuke\sabophp-mvc-core\Application.php
-    
-    ```$this->userClass = $config['userClass'];```
-
-    ```$primaryValue = $this->session->get('user');```
-
-    ```if ($primaryValue){```
-
-    ```$primaryKey = $this->userClass::primaryKey();```
-
-    ```$this->user = $this->userClass::findOne([$primaryKey => $primaryValue]);```
-    
-    ```}else```
-        
-    ```$this->user = null;```
-    
-    > since there's no user in the database that will generate an error, We're working on a fix for this problem.
 
     - ```php migrations.php```
 
