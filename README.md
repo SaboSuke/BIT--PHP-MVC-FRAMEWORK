@@ -41,4 +41,4 @@ This project exists thanks to all the people who contribute. [[Contribute](CONTR
 
 ## Version 2.0
 
-    Next version will have sql generator methods to simplify writing sql queries
+    Next version will have Query Builders to simplify writing sql queries
