@@ -15,3 +15,13 @@ if (Application::$app->session->get('theme_name')){
 $my_theme = new Theme();
 
 $theme_selection = $my_theme->generateThemeSelection();
+
+use app\models\Test;
+$test = new Test();
+/*
+if($test->_select("themes") === $query = $test->_select("themes"))
+    echo true;
+else
+    echo false;*/
+//->_where("theme");
+//$query = $test->_select("themes", null, []);
