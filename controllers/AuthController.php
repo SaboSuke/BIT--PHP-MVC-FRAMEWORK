@@ -19,6 +19,8 @@ use sabosuke\bit_mvc_core\middlewares\AuthMiddleware;
 
 class AuthController extends Controller{
 
+    public array $middleware_logs;
+
     /**
      * AuthController constructor
      */

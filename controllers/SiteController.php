@@ -17,11 +17,15 @@ use sabosuke\bit_mvc_core\Application;
 
 class SiteController extends Controller{
 
+    private $qb;
+    private $theme;
+
     /**
      * SiteController constructor
      */
     public function __construct(){
-        //
+        $this->qb = Application::$app->qb;
+        $this->theme = new Theme();
     }
 
     public function contact(Request $request, Response $response){
@@ -42,10 +46,12 @@ class SiteController extends Controller{
         $theme = new Theme();
         if($request->isGet()){
                 $params = $request->getBody();
-                var_dump($params);
+                $name = $params['name'];
+                $this->theme->setActiveTheme($name);
+                //var_dump($this->qb);
                 Application::$app->session->set('theme_name', $params['name']);
                 Application::$app->session->setFlash('success', 'Theme has been changed successfully!');
-                return $response->redirect('/');
+                //return $response->redirect('/');
         }
         return $response->redirect('/');
     }

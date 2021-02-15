@@ -8,6 +8,7 @@ use sabosuke\bit_mvc_core\theme\ThemeModel;
 use sabosuke\bit_mvc_core\form\Form;
 use sabosuke\bit_mvc_core\form\SelectField;
 use sabosuke\bit_mvc_core\theme\generator\ThemeGenerator;
+use sabosuke\bit_mvc_core\query_builder\QueryBuilder;
 
 /** 
  * Class Theme
@@ -27,12 +28,24 @@ class Theme extends ThemeModel{
     public int $status = self::STATUS_INACTIVE;
 
     public ThemeGenerator $themeGenerator;
+    public QueryBuilder $qb;
 
     /**
      * Theme constructor
      */
     public function __construct(){
-        $this->themeGenerator = new ThemeGenerator();//
+        $this->themeGenerator = new ThemeGenerator();
+        $this->qb = new QueryBuilder();
+    }
+
+    public function resetTheme(){
+        return $this->qb->update("themes", ['status'], [0])->where("status = 1")->getResult();
+    }
+
+    public function setActiveTheme($name){
+        $this->resetTheme();
+        $query = $this->qb->initQuery()->update("themes", ['status'], [1])->where("name = '$name'")->getResult("\PDO::FETCH_ASSOC");
+        return $query;
     }
 
     public function tableName(): string{

@@ -3,7 +3,6 @@
 
 /** @var $exception \Exception */
 /** @var $this \sabosuke\bit_mvc_core\View  */
-
 $this->title = $exception->getCode()." Exception";
 
 ?>
