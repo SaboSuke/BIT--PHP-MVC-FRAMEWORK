@@ -48,8 +48,8 @@ class SiteController extends Controller{
                 $params = $request->getBody();
                 $name = $params['name'];
                 $this->theme->setActiveTheme($name);
-                //var_dump($this->qb);
-                Application::$app->session->set('theme_name', $params['name']);
+
+                Application::$app->session->set('theme_name', $name);
                 Application::$app->session->setFlash('success', 'Theme has been changed successfully!');
                 //return $response->redirect('/');
         }

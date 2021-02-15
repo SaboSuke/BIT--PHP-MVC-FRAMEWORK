@@ -38,12 +38,12 @@ class Theme extends ThemeModel{
         $this->qb = new QueryBuilder();
     }
 
-    public function resetTheme(){
-        return $this->qb->update("themes", ['status'], [0])->where("status = 1")->getResult();
+    public function deActivateTheme(){
+        $query = $this->qb->update("themes", ['status'], [0])->where("status = 1")->getResult("\PDO::FETCH_ASSOC");
     }
 
     public function setActiveTheme($name){
-        $this->resetTheme();
+        $this->deActivateTheme();
         $query = $this->qb->initQuery()->update("themes", ['status'], [1])->where("name = '$name'")->getResult("\PDO::FETCH_ASSOC");
         return $query;
     }

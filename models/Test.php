@@ -22,11 +22,6 @@ class Test{
      */
     public function __construct(){
         $qb = new QueryBuilder();
-        //echo "<br><br>";
-        //var_dump($result);
-        // foreach($result as $val){
-        //     echo $val['id'];
-        // }
     }
 
 }
